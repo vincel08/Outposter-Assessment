@@ -1,0 +1,22 @@
+const keywordDatabase = {
+  nike: ["sports", "shoes", "lifestyle", "running", "fitness"],
+  adidas: ["athletic", "soccer", "streetwear", "performance"],
+  apple: ["technology", "iPhone", "MacBook", "innovation", "design"],
+  tesla: ["electric car", "EV", "sustainability", "autonomous"],
+  google: ["search engine", "AI", "advertising", "cloud", "data"],
+  microsoft: ["software", "Windows", "Office", "Azure", "enterprise"],
+  samsung: ["electronics", "smartphone", "TV", "innovation", "Android"],
+  amazon: ["e-commerce", "AWS", "cloud", "retail", "logistics"],
+  cocaCola: ["beverage", "soft drink", "refreshing", "global", "brand"],
+  pepsi: ["cola", "snack", "sports", "music", "youth"],
+  bmw: ["luxury car", "driving", "performance", "engineering", "automotive"],
+  mercedes: ["luxury", "automobile", "engineering", "comfort", "design"],
+  sony: ["electronics", "gaming", "PlayStation", "entertainment", "audio"],
+  netflix: ["streaming", "movies", "TV shows", "entertainment", "binge-watch"],
+  facebook: ["social media", "networking", "ads", "meta", "messaging"],
+  instagram: ["photo", "social", "stories", "influencer", "engagement"],
+  twitter: ["tweets", "news", "trending", "social media", "microblogging"],
+  youtube: ["videos", "streaming", "content", "creators", "monetization"],
+  spotify: ["music", "podcasts", "streaming", "playlist", "audio"],
+};
+export default keywordDatabase;

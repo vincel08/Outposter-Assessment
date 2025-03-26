@@ -1,20 +1,12 @@
 import express from "express";
 import cors from "cors";
+import keywordDatabase from "./mockData.js";
 
 const PORT = 5000;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-// Mock keyword database
-const keywordDatabase = {
-  nike: ["sports", "shoes", "lifestyle", "running", "fitness"],
-  adidas: ["athletic", "soccer", "streetwear", "performance"],
-  apple: ["technology", "iPhone", "MacBook", "innovation", "design"],
-  tesla: ["electric car", "EV", "sustainability", "autonomous"],
-  google: ["search engine", "AI", "advertising", "cloud", "data"],
-};
 
 // Route to extract keywords
 app.post("/api/keywords", async (req, res) => {
@@ -26,7 +18,7 @@ app.post("/api/keywords", async (req, res) => {
   // Convert input to lowercase for case-insensitive matching
   const brand = input.toLowerCase();
 
-  // Check if brand exists in our mock database
+  // Check if brand exists in mock database
   const keywords = keywordDatabase[brand] || [
     "general",
     "popular",
