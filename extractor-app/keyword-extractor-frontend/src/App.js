@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./styles.css";
 
 const KeywordExtractor = () => {
   const [input, setInput] = useState("");
@@ -26,29 +27,25 @@ const KeywordExtractor = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white rounded shadow-md">
-      <h2 className="text-xl font-bold mb-2">Keyword Extractor</h2>
+    <div className="container">
+      <h2 className="title">Keyword Extractor</h2>
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter a brand or word..."
-        className="border p-2 w-full mb-2"
+        className="input"
       />
-      <button
-        onClick={getKeywords}
-        className="bg-blue-500 text-white px-4 py-2 rounded w-full"
-        disabled={loading}
-      >
+      <button onClick={getKeywords} className="button" disabled={loading}>
         {loading ? "Loading..." : "Get Keywords"}
       </button>
 
-      {error && <p className="text-red-500 mt-2">{error}</p>}
+      {error && <p className="error">{error}</p>}
 
       {keywords.length > 0 && (
-        <ul className="mt-4">
+        <ul className="keyword-list">
           {keywords.map((keyword, index) => (
-            <li key={index} className="text-gray-700">
+            <li key={index} className="keyword-item">
               {keyword}
             </li>
           ))}
